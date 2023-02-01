@@ -1,0 +1,106 @@
+@import '../../../assets/scss/variables';
+@import '../../../assets/scss/mixins';
+
+.banner-module {
+    background-image: url(../../../assets/images/banner.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    .bg-shade {
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75));
+    }
+
+    .banner-content {
+        color: $color-white;
+        z-index: 10;
+        padding-top: $spacer-3;
+
+        .banner-head {
+            padding-left: $spacer-2;
+            border-left: 4px solid $color-hover;
+            font-size: 28px;
+            font-weight: 600;
+        }
+
+        .banner-text {
+            font-size: $font-xsmnav;
+            font-weight: 200;
+            text-align: justify;
+            padding-right: $spacer-3;
+            padding-top: $spacer-2;
+        }
+
+        .demobtn {
+            background-color: $color-hover;
+            color: $color-white;
+            border-radius: 0;
+            padding: $spacer-1 $spacer-4;
+            margin-top: $spacer-2;
+            position: relative;
+            transition: all 0.5s;
+            cursor: pointer;
+
+            &::after {
+                content: '\f35a';
+                font-family: FontAwesome;
+                position: absolute;
+                right: -15px;
+                top: 12px;
+                transition: all 0.5s;
+                opacity: 0;
+            }
+
+            &:hover {
+                padding-left: 20px;
+                padding-right: 60px;
+            }
+
+            &:hover::after {
+                right: 15px;
+                opacity: 1;
+            }
+        }
+
+        .talkbtn {
+            color: $color-hover;
+            padding: $spacer-1 $spacer-4;
+            margin-top: $spacer-2;
+            transition: all 5s;
+
+            i {
+                font-size: $font-lg;
+                margin-right: $spacer-1;
+            }
+
+            &:hover i {
+                animation: rotbdg 1s ease-in-out;
+            }
+        }
+    }
+}
+
+@include tablet {
+    .banner-module {
+        .bg-shade {
+            width: 100%;
+        }
+
+        .banner-content {
+            .banner-text {
+                padding-right: $spacer-0;
+            }
+
+            .talkbtn {
+                padding: $spacer-1 $spacer-2;
+            }
+        }
+
+    }
+}

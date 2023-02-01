@@ -1,0 +1,234 @@
+@import '../../../assets/scss/variables';
+@import '../../../assets/scss/mixins';
+
+.contact-module {
+
+    padding-bottom: 0;
+    .contact-text {
+        color: $color-white;
+        background-color: #4d5d6a;
+    }
+
+
+    .contactimg {
+        width: 100%;
+        height: auto;
+    }
+
+    .conttext {
+        width: 100%;
+        max-width: 648px;
+        margin-left: auto;
+        margin-right: 0;
+    }
+
+    h3 {
+        font-size: 28px;
+        font-weight: 600;
+        padding-bottom: $spacer-2;
+        padding-top: $spacer-3;
+    }
+
+    p {
+        font-weight: 300;
+        font-size: $font-sm;
+        padding-bottom: $spacer-3;
+    }
+
+    .contact-form {
+        background-color: #f1f5f8;
+        padding-top: 60px;
+    }
+
+    form {
+        margin-left: 50px;
+        width: 100%;
+        max-width: 559px;
+        font-size: 13px;
+        div {
+            position: relative;
+            width: 100%;
+            padding-right: 20px;
+            margin-bottom: 12px;
+
+            &::after {
+                content: '\f007';
+                font-family: FontAwesome;
+                position: absolute;
+                right: 35px;
+                top: 9px;
+                color: #2b98f7;
+            }
+
+            &.email::after {
+                content: '\f0e0';
+            }
+
+            &.country::after {
+                content: '\f57e';
+            }
+
+            &.phone::after {
+                content: '\f095';
+            }
+
+            &.cv::after {
+                content: '';
+            }
+
+            &.article::after {
+                content: '';
+            }
+
+            &.textareadiv::after {
+                content: '\f075';
+            }
+
+            &.subbut::after {
+                content: '';
+            }
+
+            #cv::before {
+                content: 'Your CV';
+                position: absolute;
+                left: $spacer-md;
+                vertical-align: middle;
+                color: #0009;
+            }
+
+            #article::before {
+                content: 'Article';
+                position: absolute;
+                left: $spacer-md;
+                vertical-align: middle;
+                color: #000b;
+            }
+        }
+
+        .uploaded {
+            font-size: $font-xsm;
+            display: none;
+            color: red;
+        }
+
+        .textareadiv {
+            width: 100%;
+        }
+
+        input {
+            border: 1px solid rgba(16, 56, 92, 0.2);
+            width: 100%;
+            padding: 5px;
+            display: inline-block;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        textarea {
+            border: 1px solid rgba(16, 56, 92, 0.2);
+            width: 100%;
+            padding: 5px;
+            resize: none;
+        }
+
+        textarea:focus {
+            outline: none;
+        }
+
+
+        button {
+            background-color: #10385c;
+            color: white;
+            padding: 10px 30px 10px 30px;
+            position: relative;
+            transition: all 0.5s;
+            border: none;
+            cursor: pointer;
+
+            &::after {
+                content: '\f35a';
+                font-family: FontAwesome;
+                position: absolute;
+                right: -15px;
+                top: 12px;
+                transition: all 0.5s;
+                opacity: 0;
+            }
+
+            &:hover {
+                padding-left: 20px;
+                padding-right: 40px;
+            }
+
+            &:hover::after {
+                right: 15px;
+                opacity: 1;
+            }
+        }
+    }
+
+    input[type="file"] {
+        background-color: $color-white;
+        color: #0000;
+
+        &::file-selector-button {
+            float: right;
+            border: 1px solid #0004;
+            color: #000a;
+        }
+
+        appearance: none;
+    }
+}
+
+@include mobile {
+    .contact-module {
+        .conttext {
+            max-width: 528px;
+            width: 90%;
+        }
+        form {
+            max-width: 439px;
+            width: 80%;
+        }
+    }
+}
+@media (min-width:1200px) and (max-width:1400px) {
+    .contact-module {
+        .conttext {
+            max-width: 558px;
+        }
+
+        form {
+            max-width: 469px;
+        }
+    }
+}
+
+@media (min-width:993px) and (max-width:1200px) {
+    .contact-module {
+        .conttext {
+            max-width: 468px;
+        }
+
+        form {
+            max-width: 379px;
+        }
+    }
+}
+
+@media (min-width:768px) and (max-width:992px) {
+    .contact-module {
+        .conttext {
+            max-width: 708px;
+            margin: auto;
+        }
+
+        form {
+            max-width: 619px;
+            margin: auto;
+        }
+    }
+}

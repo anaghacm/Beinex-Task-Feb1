@@ -1,0 +1,39 @@
+@import '../../../assets/scss/variables';
+@import '../../../assets/scss/mixins';
+
+.video-module{
+    .textdiv {
+        color: $color-btn;
+        padding: 80px 65px;
+        position: relative;
+        &::before {
+            content: '';
+            width: 100px;
+            height: 100px;
+            background-image: url('../../../assets/images/quotebg.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            position: absolute;
+            opacity: 0.1;
+            left: 5%;
+            top: 10%;
+        }
+        .text-head {
+            font-size: $font-lg;
+            padding-bottom: 15px;
+            font-weight: 700;
+        }
+        .text-content {
+            font-weight: 300;
+            font-size: $font-xsm;
+        }
+    }
+    .viddiv {
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+        }
+    }
+}

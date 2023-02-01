@@ -1,0 +1,69 @@
+@import '../../../assets/scss/variables';
+@import '../../../assets/scss/mixins';
+
+.nocompromise-module {
+    position: relative;
+    padding-bottom: $spacer-4;
+
+    .nocompromise-content {
+        margin-top: -28%;
+        background-color: $color-white;
+        color: $color-btn;
+        z-index: 10;
+        box-shadow: 0 2px 20px $color-dnc;
+    }
+
+    h3 {
+        font-size: 28px;
+        font-weight: 600;
+        padding-bottom: $spacer-4;
+        padding-top: $spacer-4;
+        text-align: center;
+    }
+
+    .items {
+        align-items: flex-start;
+        padding: $spacer-0 $spacer-4;
+    }
+    .item-head{
+        font-weight: 700;
+    }
+    .item-text{
+        font-size: $font-sm;
+        color:#6d6d6d;
+    }
+    .item-div {
+        padding-bottom: $spacer-3;
+        text-align: center;
+
+        img {
+            width: 100%;
+            height: 30vh;
+            padding-bottom: $spacer-1;
+        }
+
+        h3,
+        p {
+            padding: $spacer-1 $spacer-0;
+        }
+    }
+
+}
+
+
+@include tablet {
+    .nocompromise-module {
+        .nocompromise-content {
+            margin-top: -90%;
+        }
+    }
+
+}
+
+@include mobile {
+    .nocompromise-module {
+        .nocompromise-content {
+            margin-top: -100%;
+        }
+    }
+}

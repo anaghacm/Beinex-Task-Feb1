@@ -1,0 +1,134 @@
+@import '../../../assets/scss/variables';
+@import '../../../assets/scss/mixins';
+
+.form-module {
+
+    .demo-head {
+        color: $color-btn;
+        font-size: 28px;
+        font-weight: 600;
+    }
+
+    .demo-req {
+        padding: $spacer-3 $spacer-0;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    .input-div {
+        position: relative;
+        width: 50%;
+        padding-right: $spacer-2;
+        margin-bottom: 15px;
+
+        &.textareadiv {
+            width: 100%;
+        }
+
+        &::after {
+            content: '\f007';
+            font-family: FontAwesome;
+            position: absolute;
+            right: 35px;
+            top: 9px;
+            color: #2b98f7;
+        }
+
+        &.email::after {
+            content: '\f0e0';
+        }
+
+        &.country::after {
+            content: '\f57e';
+        }
+
+        &.phone::after {
+            content: '\f095';
+        }
+
+        &.company::after {
+            content: '\f1ad';
+        }
+
+        &.job::after {
+            content: '\f508';
+        }
+
+        &.textareadiv::after {
+            content: '\f075';
+        }
+
+        &.subbut::after {
+            content: '';
+        }
+
+        input {
+            border: 2px solid rgba(16, 56, 92, 0.2);
+            width: 100%;
+            padding: $spacer-md;
+            margin-right: $spacer-2;
+            display: inline-block;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        textarea {
+            border: 2px solid rgba(16, 56, 92, 0.2);
+            width: 100%;
+            padding: $spacer-md;
+            margin-bottom: 15px;
+            resize: none;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        .submit-btn {
+            background-color: $color-btn;
+            border: none;
+            color: white;
+            padding: $spacer-1 $spacer-3;
+            position: relative;
+            transition: all 0.5s;
+            cursor: pointer;
+
+            &::after {
+                content: '\f35a';
+                font-family: FontAwesome;
+                position: absolute;
+                right: -20px;
+                top: 12px;
+                transition: all 0.5s;
+            }
+
+            &:hover {
+                padding-left: $spacer-2;
+                padding-right: $spacer-4;
+            }
+
+            &:hover::after {
+                right: 15px;
+
+            }
+        }
+    }
+
+    .nextdiv {
+        border-left: 1px solid rgba(16, 56, 92, 0.3);
+        padding-left: 35px;
+        padding-right: 50px;
+        .next-head{
+            color: $color-btn;
+        }
+        .next-content {
+            font-size: 14px;
+            font-weight: 400;
+            padding: $spacer-2 $spacer-3 $spacer-1 $spacer-0;
+            opacity: 0.8;
+        }
+    }
+}

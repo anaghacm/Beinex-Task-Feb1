@@ -1,0 +1,101 @@
+@import '../../assets/scss/variables';
+@import '../../assets/scss/mixins';
+
+.links-module {
+    background-image: linear-gradient(to right top, #23133f 10%, #032d66);
+    color: white;
+    position: relative;
+
+    .footerlinks {
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+
+    .link-groups {
+        text-align: left;
+    }
+
+    .borderdiv {
+        border-left: 1px solid rgba(255, 255, 255, 0.3);
+        padding-left: $spacer-4;
+    }
+
+    .links-heading {
+        font-size: 16px;
+        padding-bottom: $spacer-1;
+    }
+
+    .linkgoup-1 {
+        color: white;
+        font-size: 13px;
+        font-weight: 300;
+        text-decoration: none;
+        display: block;
+        padding-bottom: $spacer-1;
+
+        &:hover {
+            text-decoration: underline;
+            text-underline-offset: $spacer-md;
+        }
+    }
+}
+
+
+.basefooter-module {
+    font-size: 13px;
+    font-weight: 300;
+    background-color: #150d2b;
+    color: white;
+    padding-top: $spacer-3;
+    padding-bottom: $spacer-3;
+    text-align: center;
+}
+
+.baselinks {
+    a {
+        text-decoration: none;
+        font-size: 14px;
+        color: white;
+        padding: 0px 30px;
+
+        &:hover {
+            text-decoration: underline;
+            text-underline-offset: 5px;
+        }
+    }
+
+    .blink {
+        border-left: 1px solid rgba(255, 255, 255, 0.3);
+    }
+}
+
+.smlinks {
+    padding: $spacer-2;
+
+    a {
+        font-size: 18px;
+        color: white;
+        padding: $spacer-0 $spacer-1;
+        transition: 0.5s;
+
+        &:hover {
+            color: $color-hover;
+        }
+    }
+}
+
+@include tablet {
+
+    .links-module {
+             .borderdiv {
+            border: none;
+            padding-left: $spacer-1;
+        }
+    }
+
+    .baselinks {
+        a {
+            padding: 0 10px;
+        }
+    }
+}

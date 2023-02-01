@@ -1,0 +1,48 @@
+@import '../../../assets/scss/variables';
+@import '../../../assets/scss/mixins';
+
+.casestudy-block{
+    .heading {
+        font-size: $font-lgnav;
+        font-weight: 500;
+        padding-top: $spacer-2;
+        padding-bottom: $spacer-2;
+    }
+    
+    .content {
+        font-size: $font-xsmnav;
+        font-weight: 300;
+        padding: 0;
+        margin: 0;
+        line-height: 20px;
+        color: $color-white;
+    }
+    
+    .border-col {
+        border-left: 1px solid $color-white;
+    }
+    
+    .carousel-list {
+        list-style: square;
+        color: $color-hover;
+        font-size: 20px;
+    }
+    
+    .carousel-icon {
+        font-size: 44px;
+        color: $color-hover;
+    }
+}
+
+
+@include tablet {
+    .casestudy-block {
+        .content {
+            padding-bottom: $spacer-3;
+        }
+
+        .carousel-icon {
+            padding-top: $spacer-3;
+        }
+    }
+}

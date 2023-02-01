@@ -1,0 +1,58 @@
+@import '../../../assets/scss/variables';
+@import '../../../assets/scss/mixins';
+
+.writers-module {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .writers-content {
+        color: $color-btn;
+    }
+
+    .lorem-p {
+        font-size: $font-xsmnav;
+        letter-spacing: 2px;
+        padding-right: $spacer-2;
+        margin-bottom: 0;
+    }
+
+    hr {
+        height: 1px;
+        color: $color-primarynav;
+        width: 220px;
+        opacity: 1;
+    }
+
+    h3 {
+        font-size: 28px;
+        font-weight: 600;
+        padding-bottom: $spacer-3;
+    }
+
+    .virtual {
+        width: 60%;
+        padding-top: $spacer-3;
+        justify-content: space-evenly;
+
+        i {
+            font-size: $font-lg;
+            transition: 0.5s;
+
+            &:hover {
+                color: $color-hover;
+
+            }
+        }
+    }
+
+}
+
+
+@include tablet {
+    .writers-module {
+        .virtual {
+            width: 100%;
+        }
+    }
+}

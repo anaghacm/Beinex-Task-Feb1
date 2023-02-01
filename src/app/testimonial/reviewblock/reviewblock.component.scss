@@ -1,0 +1,49 @@
+@import '../../../assets/scss/variables';
+@import '../../../assets/scss/mixins';
+
+.comdiv {
+    width: 100%;
+    margin: $spacer-2 $spacer-0;
+    border: 2px solid rgba(16, 56, 92, 0.2);
+    color: $color-btn;
+    padding: 50px $spacer-3 $spacer-3;
+    position: relative;
+
+    &::after {
+        content: '';
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background-image: url('../../../assets/images/quote.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        top: -35px;
+        left: $spacer-2;
+    }
+
+    .review-head {
+        font-weight: 500;
+        padding-bottom: $spacer-2;
+        font-size: 20px;
+    }
+
+    .review-content {
+        font-size: 12px;
+        opacity: 0.9;
+    }
+
+    .review-name {
+        padding-top: $spacer-2;
+        color: $color-black;
+        font-size: $font-md;
+        font-weight: 700;
+    }
+
+    .des {
+        color: $color-black;
+        opacity: 1;
+        font-size: 12px;
+    }
+}

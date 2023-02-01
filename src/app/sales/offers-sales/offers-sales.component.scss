@@ -1,0 +1,85 @@
+@import '../../../assets/scss/variables';
+@import '../../../assets/scss/mixins';
+
+.offers-module {
+    color: $color-primarynav;
+    position: relative;
+    background-color: #f1f5f8;
+
+    .offer-text {
+        letter-spacing: 3px;
+        font-weight: 500;
+        margin-bottom: $spacer-0;
+    }
+
+    .discount-head {
+        font-weight: 600;
+    }
+
+    .discount-line {
+        width: 280px;
+        height: 1px;
+        opacity: 1;
+        background-color: $color-primarynav;
+        margin-left: $spacer-2;
+    }
+
+    #carouselExample {
+        margin-top: 60px;
+    }
+
+    .car-indicatorleft {
+        font-size: $font-md;
+        padding: 0;
+        width: 30px;
+        height: 30px;
+        opacity: 1;
+        color: $color-white;
+        background-color: $color-primarynav;
+        position: absolute;
+        top: -110px;
+        left: 85%;
+    }
+
+    .car-indicatorright {
+        font-size: $font-md;
+        padding: 0;
+        width: 30px;
+        height: 30px;
+        opacity: 1;
+        color: $color-white;
+        background-color: $color-primarynav;
+        position: absolute;
+        top: -110px;
+        left: 90%;
+    }
+
+   
+
+}
+
+@include tablet {
+    .offers-module {
+        .car-indicatorleft {
+            top: -50px;
+            left: 80%;
+        }
+
+        .car-indicatorright {
+            top: -50px;
+            left: 90%;
+        }
+    }
+}
+
+@include mobile {
+    .offers-module {
+        .offer-text {
+            letter-spacing: normal;
+        }
+
+        .discount-line {
+            width: 190px;
+        }
+    }
+}

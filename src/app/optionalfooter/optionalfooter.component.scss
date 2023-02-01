@@ -1,0 +1,129 @@
+@import '../../assets/scss/variables';
+@import '../../assets/scss/mixins';
+
+.address-module {
+    background-color: #e9e9e9;
+    padding-top: 70px;
+    padding-bottom: 60px;
+    position: relative;
+
+    .offices {
+        padding-top: $spacer-3;
+        padding-bottom: $spacer-3;
+        padding-left: 0;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        &.uae::after {
+            background-image: url(../../assets/images/uae.png);
+        }
+
+        &.qatar::after {
+            background-image: url(../../assets/images/qatar.png);
+        }
+
+        &.uk::after {
+            background-image: url(../../assets/images/uk.png);
+        }
+
+        &.india::after {
+            background-image: url(../../assets/images/india.png);
+        }
+
+        &.kenya::after {
+            background-image: url(../../assets/images/kenya.png);
+        }
+    }
+
+    .office-heading {
+        font-weight: 600;
+        padding-bottom: $spacer-1;
+    }
+
+    .office-content {
+        font-size: $font-sm;
+        color: #686868;
+        padding: 0;
+        margin: 0;
+    }
+
+    .newsletter {
+        padding: $spacer-2 60px;
+        background-color: #1d7ad0;
+        color: $color-white;
+        position: absolute;
+        bottom: -58px;
+        left: 0;
+        right: 0;
+        z-index: 9;
+
+        .newsletter-head {
+            font-weight: 500;
+        }
+
+        .newsletter-content {
+            font-size: $font-xsm;
+            padding-top: $spacer-md;
+            font-weight: 300;
+        }
+
+        .news-input {
+            width: 40%;
+            height: 40px;
+        }
+
+        .newsletter-input {
+            width: 80%;
+            height: 100%;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        .newsletter-btn {
+            width: 50px;
+            height: 40px;
+            background-color: $color-primary;
+            color: $color-white;
+            cursor: pointer;
+            border: none;
+
+            i {
+                transition: all 0.5s;
+                font-size: $font-lg;
+            }
+
+            &:hover i {
+                transform: scale(1.5)
+            }
+        }
+
+    }
+}
+
+
+@include mobile {
+    .address-module {
+        padding: $spacer-3 $spacer-md;
+       padding-bottom: 100px;
+        .newsletter {
+            .news-input {
+                width: 100%;
+            }
+        }
+    }
+
+}

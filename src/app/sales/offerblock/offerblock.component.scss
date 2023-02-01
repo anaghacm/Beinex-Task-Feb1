@@ -1,0 +1,73 @@
+@import '../../../assets/scss/variables';
+@import '../../../assets/scss/mixins';
+
+.card {
+    border: none;
+    border-radius: 0;
+    padding: $spacer-2 $spacer-md;
+    position: relative;
+    z-index: 8;
+
+    .card-icon {
+        font-size: 40px;
+        color: $color-hover;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: -10px;
+        right: 40px;
+        width: 70px;
+        height: 70px;
+        background-image: url(../../../assets/images/discount.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .card-title {
+        padding: $spacer-2 $spacer-0;
+        font-weight: 700;
+    }
+
+    .card-text {
+        font-size: $font-xsmnav;
+    }
+
+    .card-footer {
+        background-color: $color-white;
+        border: none;
+    }
+
+    .demobtn {
+        background-color: $color-hover;
+        border: none;
+        color: $color-white;
+        border-radius: 0;
+        padding: $spacer-1 $spacer-4;
+        position: relative;
+        transition: all 0.5s;
+        cursor: pointer;
+
+        &::after {
+            content: '\f35a';
+            font-family: FontAwesome;
+            position: absolute;
+            right: -15px;
+            top: 12px;
+            transition: all 0.5s;
+            opacity: 0;
+        }
+
+        &:hover {
+            padding-left: 20px;
+            padding-right: 60px;
+        }
+
+        &:hover::after {
+            right: 25px;
+            opacity: 1;
+        }
+    }
+}

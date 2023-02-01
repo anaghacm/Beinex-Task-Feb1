@@ -1,0 +1,35 @@
+@import '../../../assets/scss/variables';
+@import '../../../assets/scss/mixins';
+
+.banner-module {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .banner {
+
+        .banner-content {
+            padding-top: $spacer-2;
+            text-align: left;
+            color: $color-white;
+        }
+    
+        .thin-head {
+            font-weight: 200;
+            font-size: $font-lgnav;
+        }
+    
+        .thick-head {
+            font-size: 38px;
+            font-weight: 600;
+            padding-bottom: $spacer-2;
+        }
+    
+        .banner-text {
+            font-size: $font-xsmnav;
+            font-weight: 200;
+            line-height: $spacer-2;
+            padding-bottom: $spacer-3;
+        }
+    }
+}
+
